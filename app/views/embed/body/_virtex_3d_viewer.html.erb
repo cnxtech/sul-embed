@@ -1,0 +1,20 @@
+<script src="https://unpkg.com/three@0.91.0/build/three.min.js"></script>
+<script src="https://unpkg.com/three@0.91.0/examples/js/loaders/MTLLoader.js"></script>
+<script src="https://unpkg.com/three@0.91.0/examples/js/loaders/OBJLoader.js"></script>
+<script src="https://unpkg.com/three@0.91.0/examples/js/Detector.js"></script>
+
+<div style="position: relative;">
+  <div class="buttons">
+    <button class="zoom-in">+</button>
+    <button class="zoom-out">-</button>
+  </div>
+  <div
+    id="virtex-3d-viewer"
+    class="virtex"
+    style="height: 400px"
+    data-sul-embed-theme="<%= viewer.asset_url('virtex_3d.css') %>"
+    data-three-dimensional-file="<%= viewer.three_dimensional_files.first %>"
+  >
+  </div>
+</div>
+<script>;jQuery.ajax({url: "<%= asset_pack_url('virtex_3d_viewer.js') %>", cache: true, dataType: 'script'});</script>
